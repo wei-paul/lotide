@@ -18,7 +18,21 @@ const assertArraysEqual = function(arrA, arrB) {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
+
+const middle = function(array) {
+  let middleNumber = [];
+  if (array.length < 3) {
+    return [];
+  }
+  if (array.length % 2 !== 0) {
+    middleNumber = array[Math.floor(array.length / 2)];
+  } else {
+    middleNumber = array[Math.floor(array.length / 2) - 1] + "," + array[Math.floor(array.length / 2)];
+  }
+  return middleNumber;
+};
+
+assertArraysEqual(middle([2,3,4,5,6]), 4);
 
 
 
