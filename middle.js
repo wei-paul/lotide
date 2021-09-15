@@ -24,15 +24,14 @@ const middle = function(array) {
   if (array.length < 3) {
     return [];
   }
-  if (array.length % 2 !== 0) {
-    middleNumber = array[Math.floor(array.length / 2)];
-  } else {
-    middleNumber = array[Math.floor(array.length / 2) - 1] + "," + array[Math.floor(array.length / 2)];
+  if (array.length % 2 === 0) {
+    middleNumber.push(array[Math.floor(array.length / 2) - 1]);
   }
+  middleNumber.push(array[Math.floor(array.length / 2)]);
   return middleNumber;
 };
 
-assertArraysEqual(middle([2,3,4,5,6]), 4);
-assertArraysEqual(middle([2,3,4,5,6,7]), "4,5");
+assertArraysEqual(middle([2,3,4,5,6]), [4]);
+assertArraysEqual(middle([2,3,4,5,6,7]), [4,5]);
 
 
