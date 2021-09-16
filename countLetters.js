@@ -20,4 +20,4 @@ const countLetters = function(string) {
   return letterCount;
 };
 
-console.log(countLetters("Lighthouse"));
+assertEqual(countLetters("hello").e, 1);
