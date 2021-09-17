@@ -6,6 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
 const eqObjects = function(object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
